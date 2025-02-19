@@ -1,0 +1,125 @@
+@use '../../style/libs/variable' as *;
+
+.Contact {
+    position: absolute;
+    bottom: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    padding: 50px;
+    background-color: rgb(46, 44, 44);
+    color: white;
+    @media (max-width: $screen-l) {
+      padding-bottom: 0;
+    }
+  }
+  
+  .Contact h1 {
+    font-size: 52px;
+    margin-bottom: 50px;
+    position: relative;
+    @media (max-width:$screen-l) {
+      font-size: 32px;
+    }
+  }
+  
+  .Contact h1::after {
+    content: "";
+    position: absolute;
+    margin-top: 20px;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20%;
+    height: 3px;
+    border-radius: 5px;
+    background-color: rgb(192, 164, 235);
+  }
+  
+  .Contact p {
+    font-size: 20px;
+    font-weight: 300;
+    font-family: "Poppins";
+    margin-bottom: 40px;
+  }
+  
+  .contact-form {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    width: 100%;
+    max-width: 1280px;
+    padding: 20px;
+  }
+  
+  .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .form-group label {
+    font-size: 16px;
+    font-weight: 500;
+  }
+  
+  .form-group input,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid rgba(192, 164, 235, 0.8);
+    border-radius: 10px;
+    background-color: #2e2c2c;
+    color: white;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus {
+    outline: none;
+    border-color: rgb(192, 164, 235);
+    background-color: #3a3939;
+  }
+  
+  .submit-btn {
+    padding: 10px;
+    background-color: rgba(192, 164, 235, 0.8);
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-top: 20px;
+    color: white;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: rgb(192, 164, 235);
+  }
+  
+  .submit-btn:focus {
+    outline: none;
+  }
+  
+  .group1,
+  .group2 {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex-grow: 1;
+  }
+   
+#message {
+    flex-grow: 1;
+    height: 100%;
+    min-height: 200px; /* Ajuste selon ton besoin */;
+    resize: vertical;
+}
+
+.group2 {
+    justify-content: space-between;
+}

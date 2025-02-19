@@ -1,0 +1,140 @@
+@use '../../style/libs/variable' as *;
+
+.about {
+    gap: 100px;
+    width: 100%; 
+    max-width: 1280px;
+    @media (max-width:$screen-xl) {
+        width: 90%;
+        margin-left: 70px;
+        gap: 60px;
+    }
+    @media (max-width:$screen-l) {
+        flex-direction: column;
+        height: auto;
+        gap: 20px;
+        margin: 0;
+    }       
+}
+
+.section__content {
+    position: relative;
+    display: flex;
+    border-radius: 55px;
+    border: solid 3px rgba(192, 164, 235, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5);
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 50px;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+    h1 {
+        @media (max-width:$screen-xl) {
+            font-size: 32px;
+        }
+        @media (max-width:$screen-l) {
+            font-size: 28px;
+        }
+    }
+    h2 {
+        color: rgba(192, 164, 235, 0.8);
+        margin-bottom: 20px;
+        font-size: 24px;
+        @media (max-width:$screen-xl) {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+    }
+    @media (max-width:$screen-l) {
+        gap: 0;
+        padding: 30px;
+    }
+    p {
+        @media (max-width:$screen-xl) {
+            font-size: 14px;
+        }
+        @media (max-width:$screen-l) {
+            font-size: 12px;
+        }
+    }
+}
+
+.content__container {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    padding-left: 40px;
+    @media (max-width:$screen-xl) {
+        padding: 0;
+    }
+    @media (max-width:$screen-l) {
+        padding: 0;
+        gap: 10px;
+    }
+
+}
+
+.icon {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    @media (max-width:$screen-l) {
+        gap: 10px;
+    }
+    svg {
+        @media (max-width:$screen-xl) {
+            width: 22px;
+            height: 22px;
+        }
+        @media (max-width:$screen-l) {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    h3 {
+        @media (max-width:$screen-xl) {
+            font-size: 16px;
+        }
+        @media (max-width:$screen-l) {
+            font-size: 14px;
+        }
+    }
+}
+
+.passion, .content__desc {
+    @media (max-width:$screen-l) {
+        flex: 1;
+    }
+}
+
+.passion {
+    @media (max-width:$screen-l) {
+    border-right: solid 2px rgba(192, 164, 235, 0.8);
+    padding-right: 20px;
+    }
+    @media (max-width:$screen-m) {
+        border: none;
+        padding: 0;
+    }
+}
+
+.work {
+    padding-left: 15px;
+    @media (max-width:$screen-xl) {
+        padding: 0;
+    }
+}
+
+.section__text {
+    gap: 20px;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    @media (max-width:$screen-l) {
+        flex-direction: row;
+    }
+    @media (max-width: $screen-m) {
+        flex-direction: column;
+    }
+}
