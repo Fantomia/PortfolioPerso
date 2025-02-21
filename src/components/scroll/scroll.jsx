@@ -2,18 +2,16 @@ import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
 const ScrollToHashElement = () => {
-    const location = useLocation();
+    const { hash } = useLocation();
 
     useEffect(() => {
-        if (location.hash) {
-            const element = document.querySelector(location.hash);
+        if (hash) {
+            const element = document.getElementById(hash.substring(1)); // Enlève le #
             if (element) {
-                setTimeout(() => {
-                    element.scrollIntoView({ behavior: "smooth" });
-                }, 100); // Petit délai pour éviter que ça ne marche pas au chargement
+                element.scrollIntoView({ behavior: "smooth", block: "start" });
             }
         }
-    }, [location]);
+    }, [hash]);
 
     return null;
 };

@@ -2,15 +2,15 @@
     {
         "id": "booki",
         "title": "Booki",
-        "coverDesktop": "/assets/booki.png",
-        "coverTablet": "/assets/bookitablet.png",
-        "coverPhone": "/assets/bookiphone.png",
+        "coverDesktop": "booki.png",
+        "coverTablet": "bookitablet.png",
+        "coverPhone": "bookiphone.png",
         "github": "https://fantomia.github.io/booki/",
         "techno": [
             {
-                "logo1": "/assets/html.svg",
-                "logo2": "/assets/css.svg",
-                "objectif": "<strong><em>HTML</strong></em> et <strong><em>CSS</strong></em> a permis de structurer le site tout en assurant une mise en page fluide et responsive grâce à Flexbox."
+                "logo1": "html.svg",
+                "logo2": "css.svg",
+                "objectif": "<strong><em>HTML</strong></em> et <strong><em>CSS</strong></em> m'a appris à structurer le site tout en assurant une mise en page fluide et responsive grâce à Flexbox."
             }
         ],
         "description": "<strong><em>Booki</em></strong> est une plateforme de réservation d'hébergements où les utilisateurs peuvent consulter des logements disponibles, filtrer selon leurs préférences, et effectuer des réservations en ligne. Le site permet de visualiser les offres, vérifier les disponibilités et réserver facilement."
@@ -18,14 +18,14 @@
     {
         "id": "ohmyfood",
         "title": "Ohmyfood",
-        "coverDesktop": "/assets/Ohmy1.png",
-        "coverTablet": "/assets/ohmyfoodtablet.png",
-        "coverPhone": "/assets/ohmyfoodphone.png",
+        "coverDesktop": "Ohmy1.png",
+        "coverTablet": "ohmyfoodtablet.png",
+        "coverPhone": "ohmyfoodphone.png",
         "github": "https://fantomia.github.io/ohmyfood/",
         "techno": [
             {
-                "logo1": "/assets/sass.svg",
-                "objectif": "L'utilisation de <strong><em>SCSS</strong></em> a permis d'optimiser et d'organiser le code CSS tout en facilitant l'intégration d'animations et de transitions pour une expérience utilisateur plus fluide et immersive."
+                "logo1": "sass.svg",
+                "objectif": "L'utilisation de <strong><em>SCSS</strong></em> m'a permis d'optimiser et d'organiser le code CSS tout en facilitant l'intégration d'animations et de transitions pour une expérience utilisateur plus fluide et immersive."
             }
         ],
         "description": "<strong><em>Ohmyfood</em></strong> est un site pour un restaurant qui présente le menu, les plats disponibles, et permet de passer des commandes en ligne. L'idée est de proposer une expérience facile pour découvrir les plats et commander directement sur le site, avec un design adapté aux mobiles."
@@ -34,12 +34,12 @@
         "id": "printit",
         "title": "Print it",
         "github": "https://fantomia.github.io/print-it/",
-        "coverDesktop": "/assets/printit.png",
-        "coverTablet": "/assets/printit.png",
-        "coverPhone": "/assets/printit.png",
+        "coverDesktop": "printit.png",
+        "coverTablet": "printit.png",
+        "coverPhone": "printit.png",
         "techno": [
             {
-                "logo1": "/assets/javascript.svg",
+                "logo1": "javascript.svg",
                 "objectif": "<strong><em>Javascript</strong></em> m'a permis ici d'ajouter une logique interactive pour modifier en temps réel le contenu de manière dynamique."
             }
         ],
@@ -49,13 +49,13 @@
         "id": "kasa",
         "title": "Kasa",
         "github": "https://fantomia.github.io/kasa/",
-        "coverDesktop": "/assets/kasa.png",
-        "coverTablet": "/assets/kasatablet.png",
-        "coverPhone": "/assets/kasaphone.png",
+        "coverDesktop": "kasa.png",
+        "coverTablet": "kasatablet.png",
+        "coverPhone": "kasaphone.png",
         "techno": [
             {
-                "logo1": "/assets/react.svg",
-                "objectif": "<strong><em>React</strong></em> a permet de structurer l'application de manière modulaire et réutilisable. React Router a facilité la navigation entre les pages sans rechargement, rendant l'expérience utilisateur plus fluide."
+                "logo1": "react.svg",
+                "objectif": "<strong><em>React</strong></em> est une technologie que j'apprécie beaucoup. Elle m'a permis de structurer l'application de manière modulaire et réutilisable. React Router a facilité la navigation entre les pages sans rechargement, rendant l'expérience utilisateur plus fluide."
             }
         ],
         "description": "<strong><em>Kasa</em></strong> est une plateforme de location d&#39;appartements développée avec React. L&#39;utilisation des composants React a permis de structurer le code de manière modulaire et réutilisable. React Router a facilité la navigation entre les différentes pages sans rechargement, rendant l&#39;expérience utilisateur plus fluide et performante."

@@ -1,6 +1,8 @@
 @forward '../style/libs/global';
 @forward '../style/libs/variable';
+@forward '../style/libs/animation';
 
+@forward '../components/loading/loading';
 @forward '../components/header/header';
 @forward '../components/landing/landing';
 @forward '../components/card/card';

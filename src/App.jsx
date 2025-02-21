@@ -5,11 +5,13 @@ import Error from './page/error'
 import Header from './components/header/header'
 import ParticlesBackground from './components/background/ParticlesBackground'
 import ScrollToHashElement from "./components/scroll/scroll";
+import Loading from './components/loading/loading'
 
 function App() {
 
   return (
     <div className='App'>
+      <Loading />
       <ParticlesBackground />
       <ScrollToHashElement />
       <Header />

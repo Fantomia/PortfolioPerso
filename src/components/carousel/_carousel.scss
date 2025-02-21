@@ -8,12 +8,17 @@
     justify-content: center;
     flex-direction: column;
     position: relative;
+    object-fit: contain;
     height: 100%;
-    @media (max-width:$screen-xl) {
+    @media (max-width:$width-xl) {
         padding-left: 0;
     }
     h1 {
         margin-bottom: 20px;
+        @media (max-width:$width-s) {
+            text-align: center;
+            font-size: 28px;
+        }
     }
 }
 
@@ -23,7 +28,7 @@
     flex-direction: column;
     height: 65vh;
     width: 90%;
-    max-width: 1000px;
+    max-width: 800px;
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 55px;
     border: solid 3px rgba(192, 164, 235, 0.8);
@@ -31,7 +36,7 @@
     align-items: flex-end;
     justify-content: center;
     padding: 20px;
-    @media (max-width:$screen-xl) {
+    @media (max-width:$width-xl) {
         min-height: 0;
         height: 60vh;
         padding: 0;
@@ -44,7 +49,8 @@
     top: 50%;
     transform: translateY(-50%);
     height: 600px;
-    @media (max-width:$screen-xl) {
+    max-width: 800px;
+    @media (max-width:$width-xl) {
         height: 100%;
         object-fit: cover;
         left: 0;
@@ -63,11 +69,11 @@
     object-position: top;
     border-radius: 50px;
     box-shadow: 0 0 20px rgba(192, 164, 235, 0.8);
-    @media (max-width: $screen-xl) {
+    @media (max-width: $width-xl) {
         box-shadow: none;
         object-position: left;
     }
-    @media (max-width: $screen-l) {
+    @media (max-width: $width-l) {
         object-position: top;
     }
 }
@@ -84,7 +90,8 @@
     color: white;
     text-wrap: pretty;
     flex-grow: 1;
-    @media (max-width:$screen-xl) {
+    will-change: opacity, visibility;
+    @media (max-width:$width-xl) {
             position: absolute;
             top: 0;
             left: 0;
@@ -100,29 +107,41 @@
             backdrop-filter: blur(3px);
             margin-left: 0;
             padding: 0 50px;
+            visibility: hidden;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    @media (max-width: $width-m) {
+        gap: 10px;
     }
     p {
         font-size: 16px;
         text-align: left;
         text-size-adjust: auto;
-        @media (max-width: $screen-m) {
+        @media (max-width: $width-m) {
             font-size: 12px;
+        }
+        @media (max-width: $width-xs) {
+            font-size: 10px;
         }
     }
     strong {
-        @media (max-width: $screen-m) {
+        @media (max-width: $width-m) {
             font-size: 16px;
+        }
+        @media (max-width: $width-s) {
+            font-size: 14px;
         }
     }
     a {
-        @media (max-width: $screen-m) {
+        @media (max-width: $width-m) {
             font-size: 14px;
         }
     }
 }
 
-.carousel__image:hover + .carousel__content {
+.carousel__content.visible {
     opacity: 1;
+    visibility: visible;
 }
 
 .carousel__techno-logo {
@@ -137,7 +156,7 @@
 }
 .carousel__techno-logo {
     height: 80px;
-    @media (max-width: $screen-m) {
+    @media (max-width: $width-m) {
         height: 50px;
     }
 }
@@ -154,9 +173,6 @@
 }
 
 .carousel__controls {
-    position: absolute;
-    bottom: 20px; 
-    left: 50%;  
     display: flex;
     gap: 20px; 
     backdrop-filter: blur(1px);
@@ -165,6 +181,9 @@
     position: static;
     margin-top: 10px;
     border: 2px solid rgba(192, 164, 235, 0.8);
+    @media (max-width: $width-s) {
+        gap: 0;
+    }
 }
 
 
@@ -177,13 +196,20 @@
     transition: transform 0.2s ease-in-out;
     display: flex;
     align-items: center;
-    @media (max-width: $screen-xl) {
+    @media (max-width: $width-xl) {
         color: white;
+    }
+    @media (max-width: $width-s) {
+        font-size: 12px;
+        padding: 5px 10px;
     }
 }
 
 .carousel__controls--btn svg {
     width: 40px;
+    @media (max-width: $width-s) {
+        width: 30px;
+    }
 }
 
 .carousel__controls--btn:hover {
@@ -192,10 +218,16 @@
 
 .carousel__github {
     margin-top: 50px;
-    @media (max-width: $screen-m) {
+    @media (max-width: $width-m) {
         margin-top: 20px;
+    }
+    @media (max-width: $width-s) {
+        margin-top: 0;
     }
     a {
     text-decoration: underline;
+    @media (max-width: $width-xs) {
+        font-size: 10px;
+    }
     }
 }

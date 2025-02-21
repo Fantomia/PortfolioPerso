@@ -4,6 +4,16 @@ import PropTypes from "prop-types";
 const Carousel = ({ slides }) => {
     const [indexItem, setIndexItem] = useState(0);
     const [screenSize, setScreenSize] = useState(window.innerWidth);
+    const [isContentVisible, setIsContentVisible] = useState(false);
+
+    const handleToggleContent = () => {
+        if (screenSize <= 1462) {
+            setIsContentVisible((prev) => !prev);
+        }
+    };
+    
+    // Ajout de la base URL pour les chemins des images
+    const basePath = import.meta.env.BASE_URL + "assets/";
 
     // Met à jour la taille de l'écran lors du redimensionnement
     useEffect(() => {
@@ -23,30 +33,30 @@ const Carousel = ({ slides }) => {
     const currentSlide = slides[indexItem];
 
     // Sélection de l'image en fonction de la taille de l'écran
-    let imageSrc = currentSlide.coverDesktop;
+    let imageSrc = `${basePath}${currentSlide.coverDesktop}`;
     if (screenSize <= 768) {
-        imageSrc = currentSlide.coverTablet;
+        imageSrc = `${basePath}${currentSlide.coverTablet}`;
     }
     if (screenSize <= 480) {
-        imageSrc = currentSlide.coverPhone;
+        imageSrc = `${basePath}${currentSlide.coverPhone}`;
     }
 
     return (
         <section className="carousel__container">
             <h1>MES PROJETS</h1>
-            <div className="carousel">
+            <div className="carousel" onClick={handleToggleContent}>
                 <div className="carousel__image">
                     <img src={imageSrc} alt={currentSlide.title} />
                 </div>
-                <div className="carousel__content">
-                    <p className="carousel__description" dangerouslySetInnerHTML={{ __html: currentSlide.description }} />   
+                <div className={`carousel__content ${isContentVisible || screenSize > 1462 ? "visible" : ""}`}>
+                    <p className="carousel__description" dangerouslySetInnerHTML={{ __html: currentSlide.description }} />
                     {currentSlide.techno && (
                         <div className="carousel__techno">
                             <div className="carousel__techno-logos">
                                 {currentSlide.techno.map((tech, index) => (
                                     <div key={index} className="carousel__techno-logo">
-                                        <img src={tech.logo1} alt="Techno logo" />
-                                        {tech.logo2 && <img src={tech.logo2} alt="Techno logo" />}
+                                        <img src={`${basePath}${tech.logo1}`} alt="Techno logo" />
+                                        {tech.logo2 && <img src={`${basePath}${tech.logo2}`} alt="Techno logo" />}
                                     </div>
                                 ))}
                             </div>

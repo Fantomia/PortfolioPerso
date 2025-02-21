@@ -4,36 +4,30 @@ import { Link } from "react-router-dom";
 const Header = () => {
     const [showNav, setShowNav] = useState(false);
     const [isBlurred, setIsBlurred] = useState(false);
-    const logo = "/assets/ja.png";
+    const logo = `${import.meta.env.BASE_URL}assets/ja.png`;
 
     useEffect(() => {
         const handleScroll = () => {
-            if (window.scrollY > 20) {
-                setIsBlurred(true); // Appliquer le flou si on a scrollé de plus de 50px
-            } else {
-                setIsBlurred(false); // Enlever le flou quand on revient en haut
-            }
+            console.log("window.scrollY:", window.scrollY);
+            setIsBlurred(window.scrollY > 20);  // Blurring si on dépasse 20px
         };
-
-        window.addEventListener("scroll", handleScroll);
-        return () => window.removeEventListener("scroll", handleScroll); // Nettoyage de l'écouteur
+    
+        window.addEventListener('scroll', handleScroll);
+    
+        return () => {
+            window.removeEventListener('scroll', handleScroll);
+        };
     }, []);
 
     return (
         <header className="header">
             {/* HAMBURGER ICON */}
-            <svg 
-                id="hamburger" 
-                className={`Header__toggle-svg ${showNav ? "open" : ""}`} 
-                viewBox="0 0 60 40" 
-                onClick={() => setShowNav(true)} 
-            >
-                <g stroke="#fff" strokeWidth="4" strokeLinecap="round" strokeLinejoin="round">
-                    <path id="top-line" d="M10,10 L50,10 Z"></path>
-                    <path id="middle-line" d="M10,20 L50,20 Z"></path>
-                    <path id="bottom-line" d="M10,30 L50,30 Z"></path>
-                </g>
-            </svg>
+            <div className="hamburger-lines" onClick={() => setShowNav(prevState => !prevState)}>
+                <span className={`line line1 ${showNav ? "open" : ""}`}></span>
+                <span className={`line line2 ${showNav ? "open" : ""}`}></span>
+                <span className={`line line3 ${showNav ? "open" : ""}`}></span>
+            </div>
+
 
             {/* TITRE */}
             <div className={`title__section ${isBlurred ? "blurred" : ""}`}>
@@ -50,12 +44,12 @@ const Header = () => {
                 onMouseLeave={() => setShowNav(false)}
             >
                 <div className="nav__menu">
-                    <img src={logo} alt="Logo" />
+                    <img src={logo} alt="Logo" className="logo-in-nav" />
                     <nav className="nav__links">
-                        <Link to="/#Home">Accueil</Link>
-                        <Link to="/#About">A Propos</Link>
-                        <Link to="/#Project">Projets</Link>
-                        <Link to="/#Contact">Contact</Link>
+                        <Link to="./#Home">Accueil</Link>
+                        <Link to="./#About">A Propos</Link>
+                        <Link to="./#Project">Projets</Link>
+                        <Link to="./#Contact">Contact</Link>
                     </nav>
                 </div>
             </nav>

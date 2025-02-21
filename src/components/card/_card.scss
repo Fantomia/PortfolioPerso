@@ -8,18 +8,18 @@
     background-color: rgba(0, 0, 0, 0.6);
     border-radius: 55px;
     border: solid 3px rgba(192, 164, 235, 0.8);
-    @media (max-width:$screen-m) {
+    @media (max-width:$width-m) {
         width: 70%;
         max-width: 350px;
         flex-direction: column;
         margin-left: 50px;
     }
-    @media (max-width:$screen-s) {
+    @media (max-width:$width-s) {
         width: 90%;
         border-radius: 40px;
         margin-left: 0;
     }
-    @media (max-width:$screen-xs) {
+    @media (max-width:$width-xs) {
         border-radius: 30px;
     }
     img {
@@ -28,7 +28,7 @@
         position: absolute;
         bottom: 17%;
         left: -80px;
-        @media (max-width:$screen-l) {
+        @media (max-width:$width-l) {
             bottom: 17%;
             left: -100px;
             border-radius: 800px;
@@ -38,7 +38,7 @@
             object-position: center;
             border: solid 10px rgba(192, 164, 235, 0.4);
         }
-        @media (max-width:$screen-s) {
+        @media (max-width:$width-s) {
             left: 95px;
             bottom: 0;
             top: -75px;
@@ -46,7 +46,7 @@
             max-height: 150px;
             width: 150px;
         }
-        @media (max-width:$screen-xs) {
+        @media (max-width:$width-xs) {
             left: 72px;
             bottom: 0;
             top: -75px;
@@ -66,17 +66,17 @@
         object-fit: cover;
         object-position: center;
         text-wrap: pretty;
-        @media (max-width:$screen-l) {
+        @media (max-width:$width-l) {
             margin-left: 90px;
             height: auto;
             gap: 20px;
             justify-content: flex-end;
             padding: 50px 20px;
         }
-        @media (max-width:$screen-m) {
+        @media (max-width:$width-m) {
             padding: 35px 20px;
         }
-        @media (max-width:$screen-s) {
+        @media (max-width:$width-s) {
             margin-left: 0;
             text-align: center;
             margin-top: 60px;
@@ -84,18 +84,18 @@
         }
         p {
             font-size: 16px;
-            @media (max-width:$screen-l) {
+            @media (max-width:$width-l) {
                 font-size: 14px;
             }
-            @media (max-width:$screen-xs) {
+            @media (max-width:$width-xs) {
                 font-size: 12px;
             }
         }
         h3 {
-            @media (max-width:$screen-l) {
+            @media (max-width:$width-l) {
                 font-size: 16px;
             }
-            @media (max-width:$screen-xs) {
+            @media (max-width:$width-xs) {
                 font-size: 12px;
             }
         }
@@ -104,16 +104,16 @@
 
 .card__name {
     color: white;
-    @media (max-width:$screen-xs) {
+    @media (max-width:$width-xs) {
         text-align: center;
     }
 }
 
 .name {
-    @media (max-width:$screen-l) {
+    @media (max-width:$width-l) {
         font-size: 14px;
     }
-    @media (max-width:$screen-m) {
+    @media (max-width:$width-m) {
         font-size: 12px;
     }
 }

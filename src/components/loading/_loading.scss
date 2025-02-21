@@ -1,0 +1,84 @@
+@use '../../style/libs/variable' as *;
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -2;
+    height: 100%;
+    width: 100%;
+    opacity: 1;
+    animation: load 3s ease-in-out;
+    background-color: black;
+    &__container {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100%;
+    }
+    &__logo {
+        position: absolute;
+        color: rgba(255,255,255,0.6);
+        height: 200px;
+        transform: translateX(-230px);
+        animation: logoAppear 2.5s ease-in-out;
+        opacity: 0;
+    }
+    &__name {
+        font-size: 38px;
+        color: rgba(192, 164, 235, 0.8);
+        font-style: italic;
+        h2 {
+            line-height: normal;
+        }
+    }
+    &__firstName {
+        font-weight: 400;
+        animation: firstNameAppear 2s ease-in-out 0.5s;
+        opacity: 0;
+    }
+    &__lastName {
+        animation: lastNameAppear 2s ease-in-out 0.7s;
+        opacity: 0;
+    }
+}
+
+@media (max-width: $width-l) {
+    .loader {
+        &__logo {
+            height: 100px;
+            animation: logoAppear-tablet 2.5s ease-in-out;
+            transform: translateX(-50px);
+        }
+        &__name {
+            font-size: 20px;
+        }
+        &__firstName {
+            animation: firstNameAppear-tablet 2s ease-in-out 0.5s;
+        }
+        &__lastName {
+            animation: lastNameAppear-tablet 2s ease-in-out 0.7s;
+        }
+    }
+}
+
+@media (max-width: $width-m) {
+    .loader {
+        &__logo {
+            height: 60px;
+            animation: logoAppear-mobile 2.5s ease-in-out;
+            transform: translateX(-50px);
+        }
+        &__name {
+            font-size: 14px;
+        }
+        &__firstName {
+            animation: firstNameAppear-mobile 2s ease-in-out 0.5s;
+        }
+        &__lastName {
+            animation: lastNameAppear-mobile 2s ease-in-out 0.7s;
+        }
+    }
+}
+

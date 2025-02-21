@@ -1,5 +1,5 @@
 const Card = () => {
-    const pictureProfile = "./assets/pp.jpg"
+    const pictureProfile = `${import.meta.env.BASE_URL}assets/pp.jpg`;
     return (    
         <div className="Card">
             <img src={pictureProfile} alt="profilePicture" />

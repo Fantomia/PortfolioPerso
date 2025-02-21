@@ -44,7 +44,7 @@ const Section = () => {
                         </div>
                     </div>
                     <div className="content__desc work">
-                        <h2>Mon approche de travail</h2>
+                        <h2>Mon approche</h2>
                         <p>   
                             Je suis convaincu que le travail d&#39;équipe et l&#39;harmonie entre les individus créent les meilleures dynamiques. En tant que chef de choeur, je m&#39;efforce de rassembler les talents, tout en créant un environnement où chacun peut s&#39;épanouir et contribuer à une cause commune. Cette approche collaborative, je la transpose également dans mon travail de développeur, où chaque projet est une composition, nécessitant une synergie entre l&#39;idée et l&#39;exécution.
                         </p>

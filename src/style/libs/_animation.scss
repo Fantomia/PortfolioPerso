@@ -1,0 +1,227 @@
+@keyframes load {
+    0% {
+        backdrop-filter: blur(100px);
+        background-color: rgba(255,255,255,0.8);
+        opacity: 1;
+        z-index: 99;
+    }
+    20% {
+        background-color: rgba(255,255,255,0.4);
+    }
+    88% {
+        opacity: 1;
+        background-color: rgba(255,255,255,0.2);
+        backdrop-filter: blur(100px);
+    }
+    100% {
+        opacity: 0;
+        z-index: 99;
+    }
+}
+
+@keyframes logoAppear {
+    0% {
+        transform: scale(3);
+    }
+    20% {
+        transform: scale(1);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-300px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(-250px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+}
+
+
+@keyframes firstNameAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(180px);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(150px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes lastNameAppear {
+    0% {
+        opacity: 0;
+        transform: translateX(80px);
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(180px);
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(150px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+/* TABLET */
+
+@keyframes logoAppear-tablet {
+    0% {
+        transform: scale(3);
+    }
+    20% {
+        transform: scale(1);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(-90px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+}
+
+@keyframes firstNameAppear-tablet {
+    0% {
+        opacity: 0;
+        transform: translateX(70px);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(130px);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(120px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes lastNameAppear-tablet {
+    0% {
+        opacity: 0;
+        transform: translateX(60px);
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(120px);
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(115px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+
+/* MOBILE */
+@keyframes logoAppear-mobile {
+    0% {
+        transform: scale(3);
+    }
+    20% {
+        transform: scale(1);
+        transform: translateX(0px);
+    }
+    50% {
+        transform: translateX(-100px);
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(-90px);
+        opacity: 1;
+    }
+    100% {
+        transform: translateX(-2000px);
+        opacity: 0;
+    }
+}
+
+@keyframes firstNameAppear-mobile {
+    0% {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    20% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(70px);
+        opacity: 1;
+    }
+    80% {
+        opacity: 1;
+    }
+    90% {
+        transform: translateX(60px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}
+
+@keyframes lastNameAppear-mobile {
+    0% {
+        opacity: 0;
+        transform: translateX(15px);
+    }
+    25% {
+        opacity: 0;
+    }
+    50% {
+        transform:translateX(60px);
+        opacity: 1;
+    }
+    60% {
+        opacity: 1;
+    }
+    80% {
+        transform: translateX(50px);
+    }
+    100% {
+        transform: translateX(2000px);
+    }
+}

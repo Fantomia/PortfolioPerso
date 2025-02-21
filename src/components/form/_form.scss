@@ -8,11 +8,11 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
     padding: 50px;
-    background-color: rgb(46, 44, 44);
+    background-color: rgb(46, 44, 44, 1);
     color: white;
-    @media (max-width: $screen-l) {
+    @media (max-width: $width-l) {
       padding-bottom: 0;
     }
   }
@@ -21,15 +21,19 @@
     font-size: 52px;
     margin-bottom: 50px;
     position: relative;
-    @media (max-width:$screen-l) {
+    @media (max-width:$width-l) {
       font-size: 32px;
+    }
+    @media (max-width:$width-s) {
+      font-size: 20px;
+      margin-bottom: 20px;
     }
   }
   
   .Contact h1::after {
     content: "";
     position: absolute;
-    margin-top: 20px;
+    margin-top: 10px;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
@@ -37,6 +41,9 @@
     height: 3px;
     border-radius: 5px;
     background-color: rgb(192, 164, 235);
+    @media (max-width: $width-s) {
+      height: 1px;
+    }
   }
   
   .Contact p {
@@ -44,30 +51,52 @@
     font-weight: 300;
     font-family: "Poppins";
     margin-bottom: 40px;
+    @media (max-width: $width-s) {
+      font-size: 12px;
+      margin-bottom: 10px;
+    }
   }
   
-  .contact-form {
+  .contact__form {
     display: flex;
     justify-content: center;
     gap: 40px;
     width: 100%;
     max-width: 1280px;
     padding: 20px;
+    @media (max-width: $width-m) {
+      flex-direction: column;
+      padding: 0;
+      gap: 5px;
+    }
   }
   
-  .form-group {
+  .form__group {
     display: flex;
     flex-direction: column;
     gap: 10px;
+    position: relative;
+    @media (max-width: $width-m) {
+      gap: 5px;
+    }
   }
   
-  .form-group label {
+  .form__group label {
+    position: absolute;
+    top: 11px;
+    left: 11px;
     font-size: 16px;
     font-weight: 500;
+    pointer-events: none;
+    transition: 150ms cubic-bezier(0.4, 0, 0.2, 1);
+    @media (max-width: $width-s) {
+      font-size: 12px;
+    }
   }
   
-  .form-group input,
-  .form-group textarea {
+  .form__group input,
+  .form__group textarea {
+    all: unset;
     padding: 10px;
     font-size: 16px;
     border: 1px solid rgba(192, 164, 235, 0.8);
@@ -76,25 +105,39 @@
     color: white;
     width: 100%;
     box-sizing: border-box;
+    transition: cubic-bezier(0.4, 0, 0.2, 1);
+    @media (max-width: $width-s) {
+      font-size: 12px;
+    }
   }
   
-  .form-group input:focus,
-  .form-group textarea:focus {
+  .form__group input:focus,
+  .form__group textarea:focus {
     outline: none;
-    border-color: rgb(192, 164, 235);
-    background-color: #3a3939;
+    border: 1px solid;
+    background-color: #2e2c2c;
   }
-  
+
+  .form__group textarea:is(:focus, :not(:placeholder-shown)) ~ label,
+  .form__group input:is(:focus, :not(:placeholder-shown)) ~ label {
+    transform: translateY(-90%) scale(0.8);
+    padding-inline: 0.3rem;
+    background-color: #2e2c2c;
+  }
+
   .submit-btn {
     padding: 10px;
     background-color: rgba(192, 164, 235, 0.8);
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    margin-top: 20px;
+    font-weight: 500;
     color: white;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    @media (max-width: $width-s) {
+      font-size: 14px;
+    }
   }
   
   .submit-btn:hover {
@@ -105,21 +148,96 @@
     outline: none;
   }
   
-  .group1,
-  .group2 {
+  .form {
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 20px;
     flex-grow: 1;
+    height: 100%;
+    @media (max-width: $width-s) {
+      gap: 10px;
+    }
   }
    
 #message {
     flex-grow: 1;
     height: 100%;
-    min-height: 200px; /* Ajuste selon ton besoin */;
+    min-height: 182px;
     resize: vertical;
+    @media (max-width: $width-s) {
+      min-height: 150px;
+    }
+    @media (max-width: $width-xs) {
+      min-height: 100px;
+    }
 }
 
-.group2 {
-    justify-content: space-between;
+.message {
+  margin-top: 15px;
+  @media (max-width: $width-s) {
+    margin-top: 5px;
+  }
+}
+
+.social__logo {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center;
+
+  svg {
+      width: 30px;
+      height: 30px;
+      transition: transform 0.2s ease-in-out;
+  }
+
+  @media (max-width: 768px) {
+      svg {
+          width: 25px;
+          height: 25px; 
+      }
+  }
+
+  @media (max-width: 480px) {
+      svg {
+          width: 20px;
+          height: 20px; 
+      }
+  }
+}
+
+.social__media h2 {
+  margin: 30px 0;
+  @media (max-width: $width-s) {
+    font-size: 14px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+  }
+}
+
+.form__info--names {
+  margin-top: 15px;
+  gap: 40px;
+  @media (max-width: $width-m) {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+  .form__group {
+    flex: 1;
+  }}
+  @media (max-width: $width-s) {
+    flex-direction: column;
+    margin-top: 0;
+  }
+}
+
+.form__info--formal,
+.form__info--names {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  @media (max-width: $width-s) {
+    gap: 10px;
+  }
 }

@@ -8,13 +8,20 @@ const ParticlesBackground = () => {
   }, []);
 
   return (
+  
     <Particles
       id="tsparticles"
       init={particlesInit}
       options={{
         background: {
           color: "transparent",
-        },
+          image: `url('${import.meta.env.BASE_URL}assets/krunsplash.jpg')`,
+          position: "center",
+          size: "cover",
+          repeat: "no-repeat",
+          zIndex: -1,
+          attachment: "fixed", // Ajouté ici
+      },
         particles: {
           number: {
             value: 12,
@@ -61,10 +68,6 @@ const ParticlesBackground = () => {
               enable: true,
               mode: "repulse",
             },
-            onClick: {
-              enable: true,
-              mode: "push",
-            },
           },
           modes: {
             repulse: {
@@ -85,6 +88,7 @@ const ParticlesBackground = () => {
         zIndex: 1,
       }}
     />
+    
   );
 };
 
